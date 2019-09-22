@@ -5,4 +5,6 @@
 # @example
 #   include profile::puppetmaster
 class profile::puppetmaster {
+  class { 'puppetserver::repository': }
+    -> class { 'puppetserver': }
 }
