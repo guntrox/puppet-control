@@ -6,4 +6,8 @@
 #   include profile::base
 class profile::base {
   include ntp
+
+  file { ['/etc/puppetlabs/facter', '/etc/puppetlabs/facter/facts.d']:
+    ensure => directory,
+  }
 }
